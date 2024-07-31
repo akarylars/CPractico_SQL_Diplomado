@@ -2,15 +2,20 @@
 Repositorio nuevo para entrega del domingo 4 de agosto del 2024, referente al caso práctico realizado en PostgresSQL
 ## Decribiendo los resultados de mi análisis de consultas
 
+
 ## Tabla Menu_items
 
 ● Encontrar el número de artículos en el menú.
 32 PRODUCTOS EN EL MENÚ
+
 ● ¿Cuál es el artículo menos caro y el más caro en el menú?
 edamame es el platillo más barato
+
 shrimp scampi el platillo más caro
+
 ● ¿Cuántos platos americanos hay en el menú?
 6 platos americanos
+
 ● ¿Cuál es el precio promedio de los platos?
 13.28$
 
