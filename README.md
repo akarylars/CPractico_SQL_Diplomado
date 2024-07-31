@@ -20,7 +20,9 @@ shrimp scampi el platillo más caro
 5730 pedidos únicos
 
 ¿Cuáles son los 5 pedidos que tuvieron el mayor número de artículos?
+
 ![5ventas](https://github.com/user-attachments/assets/83503d8a-5b1c-4b17-85cc-889fac897987)
+
 
 ● ¿Cuándo se realizó el primer pedido y el último pedido?
 primer pedido "2023-01-01"
@@ -42,77 +44,12 @@ restaurante en el lanzamiento de su nuevo menú. Para ello, crea tus propias con
 utiliza los resultados obtenidos para llegar a estas conclusiones.
 
 1- Categoría de comida más vendida: Comida asiática 
-SELECT 
-    mi.category,
-    SUM(od.order_id) AS total_sales
-FROM 
-    order_details AS od
-LEFT JOIN 
-    menu_items AS mi
-ON 
-    od.item_id = mi.menu_item_id
-GROUP BY 
-    mi.category
-ORDER BY 
-    total_sales DESC
-LIMIT 1;
-
 
 2- Platillo mas vendido:  Hamburguesa
-SELECT 
-    mi.item_name,
-    SUM(od.order_id) AS total_sales
-FROM 
-    order_details AS od
-LEFT JOIN 
-    menu_items AS mi
-ON 
-    od.item_id = mi.menu_item_id
-WHERE 
-    mi.item_name IS NOT NULL
-GROUP BY 
-    mi.item_name
-ORDER BY 
-    total_sales DESC
-LIMIT 1;
-
 
 3-Platillo menos vendido: Chicken tacos
-SELECT 
-    mi.item_name,
-    SUM(od.order_id) AS total_sales
-FROM 
-    order_details AS od
-LEFT JOIN 
-    menu_items AS mi
-ON 
-    od.item_id = mi.menu_item_id
-WHERE 
-    mi.item_name IS NOT NULL
-GROUP BY 
-    mi.item_name
-ORDER BY 
-    total_sales ASC
-LIMIT 1;
-
 
 4- categoría menos vendida: Comida americana
-SELECT 
-    mi.category,
-    SUM(od.order_id) AS total_sales
-FROM 
-    order_details AS od
-LEFT JOIN 
-    menu_items AS mi
-ON 
-    od.item_id = mi.menu_item_id
-WHERE 
-    mi.category IS NOT NULL
-GROUP BY 
-    mi.category
-ORDER BY 
-    total_sales ASC
-LIMIT 1;
 
 5- CONCLUSIONES FINALES:  Aun que el platillo más vendido es la hamburguesa, en general la comida americana no
 es la más vendida, lo es la asiática, siguiendole la italiana y mexicana, mientras que el platillo menos vendido son los chickentacos. 
