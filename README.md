@@ -25,6 +25,8 @@ shrimp scampi el platillo más caro
 5730 pedidos únicos
 
 ¿Cuáles son los 5 pedidos que tuvieron el mayor número de artículos?
+
+
 ![5+VENDIDOS](https://github.com/user-attachments/assets/dbdb26c7-9c35-4219-a99d-13356c1dedea)
 
 
