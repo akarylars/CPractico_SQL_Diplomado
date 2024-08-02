@@ -37,12 +37,14 @@ FROM order_details;
 --5730
 
 --● ¿Cuáles son los 5 pedidos que tuvieron el mayor número de artículos?
-SELECT order_id, item_id
-FROM order_details
-WHERE item_id IS NOT NULL
-ORDER BY item_id DESC
-LIMIT 5;
---132 
+SELECT * FROM order_details
+	
+	SELECT order_id, COUNT(item_id)
+	FROM order_details
+	GROUP BY order_id
+	ORDER BY COUNT(item_id) DESC
+	LIMIT 5;
+--14 PLATILLOS
 
 --● ¿Cuándo se realizó el primer pedido y el último pedido?
 SELECT 
